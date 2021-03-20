@@ -1,0 +1,30 @@
+.table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table .thead .th {
+  background: #202020;
+  color: white;
+  padding: 10px 20px;
+}
+
+.table .tbody .td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+}
+
+.table .tbody .tr:hover {
+  background: #f7f7f7;
+  cursor: default;
+}
+
+.global-snackbar {
+  background: #3bfebb;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  width: 500px;
+}

@@ -1,0 +1,21 @@
+
+<div class="global-snackbar" *ngIf="getSnackbar().isVisible">
+    {{ getSnackbar().message }}
+</div>
+<table class="table">
+    <thead class="thead">
+        <tr class="tr">
+            <th class="th" *ngFor="let header of headers">
+                {{ header }}
+            </th>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+        <tr class="tr" *ngFor="let trainee of getTrainees()">
+            <td class="td">{{ trainee.traineeName }}</td>
+            <td class="td">{{ trainee.courseName }}</td>
+            <td class="td">{{ trainee.joiningDate }}</td>
+            <td class="td">{{ trainee.courseDate }}</td>
+        </tr>
+    </tbody>
+</table>

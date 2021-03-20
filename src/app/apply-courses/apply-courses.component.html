@@ -1,0 +1,41 @@
+<form class="form" id="apply-form" (change)="onChange()">
+    <div class="form-container">
+
+        <div class="form-group">
+            <label class="form-label" for="traineeName" aria-required="true">
+                Trainee Name<span class="required-asterisks">*</span>
+            </label>
+            <input class="form-input" id="trainee-name" name="traineeName" [(ngModel)]="traineeName" />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="courseName">
+                Courses<span class="required-asterisks">*</span>
+            </label>
+            <select class="form-input" id="courseName" name="courseName" [(ngModel)]="courseName">
+        <option value="" disabled selected>Select Course</option>            <option *ngFor="let course of getCourses()" value="{{ course.value }}">{{ course.text }}</option>
+            </select>
+            
+        </div>
+    
+        <div class="form-group">
+            <label class="form-label" for="joiningDate">
+                Joining Date<span class="required-asterisks">*</span>
+            </label>
+            <input class="form-input" type="date" id="joining-date" name="joiningDate" [(ngModel)]="joiningDate" />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="courseDate">
+                Course Date<span class="required-asterisks">*</span>
+            </label>
+            <input class="form-input" type="date" id="course-date" name="courseDate" [(ngModel)]="courseDate" />
+        </div>
+        
+        <ul class="error-ul">
+            <li class="error-list"  *ngFor="let error of errors">
+                {{ error }}
+            </li>
+        </ul>
+    
+        <button id="save" class="form-button" (click)="checkAndAddData()">Submit</button>
+    </div>
+</form>

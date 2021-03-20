@@ -1,0 +1,21 @@
+.nav-ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav-li {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.nav-link {
+  color: #009ac1;
+}
+
+.nav-link.active {
+  color: #005bff;
+  font-weight: 600;
+}

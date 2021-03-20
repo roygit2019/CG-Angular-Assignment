@@ -1,0 +1,19 @@
+<h1>Training App</h1>
+<nav>
+  <ul class="nav-ul">
+    <li *ngFor="let path of paths" class="nav-li">
+      <a 
+        routerLink="{{ path.href }}" 
+        routerLinkActive="active" 
+        class="nav-link" 
+        id="{{ path.id }}"
+      >
+        {{ path.title }}
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<router-outlet></router-outlet>
